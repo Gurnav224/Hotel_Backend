@@ -20,6 +20,10 @@ app.use(cors(corsOption))
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('hotel server is running ')
+})
+
 async function createHotel(hotel){
   try {
     const newHotel = new Hotel(hotel);
